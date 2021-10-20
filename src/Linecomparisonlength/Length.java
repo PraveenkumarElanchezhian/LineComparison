@@ -2,7 +2,7 @@ package Linecomparisonlength;
 
 import java.util.Scanner;
 
-public class Equality {
+public class Comparelength {
 	public static void main(String[] args) 
 	{
      	Scanner n = new Scanner(System.in);
@@ -37,15 +37,21 @@ public class Equality {
 		System.out.println("Distance between two points :" + length_one);
 		System.out.println("Distance between two points :" + length_two);
 		
-		if (length_one == length_two)
+		int a = Double.compare(length_one, length_two);
+
+        if (a==0)
         {
-            System.out.println("The length is equal");
+            System.out.println("Length_one and Length_two are equal");
         }
 
-        else
-        {
-            System.out.println("The length is not equal");
+        else if(a==1)
+        {  System.out.println("Length_one is greater than Length_two");
         }
+        else
+        {  
+        	System.out.println("Length_one is less than Length_two");
+        }
+		
 	}
 
 }
